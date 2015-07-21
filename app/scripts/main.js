@@ -3,7 +3,7 @@
  *
  * @module GiveMeAnswer
  */
-(function () {
+(function() {
   'use strict';
 
   angular
@@ -12,18 +12,29 @@
       'GiveMeAnswer.config',
       'GiveMeAnswer.components.home',
       'GiveMeAnswer.components.about',
-      'GiveMeAnswer.components.contact'
+      'GiveMeAnswer.components.contact',
+      'GiveMeAnswer.components.answer'
     ])
     .controller('AppController', AppController);
 
-  AppController.$routeConfig = [
-    { path: '/',       redirectTo: '/home' },
-    { path: '/home',    component: 'home' },
-    { path: '/about',   component: 'about' },
-    { path: '/contact', component: 'contact' }
-  ];
+  AppController.$routeConfig = [{
+    path: '/',
+    redirectTo: '/home'
+  }, {
+    path: '/home',
+    component: 'home'
+  }, {
+    path: '/about',
+    component: 'about'
+  }, {
+    path: '/contact',
+    component: 'contact'
+  }, {
+    path: '/answer',
+    component: 'answer'
+  }];
 
-  AppController.$inject = [];  
+  AppController.$inject = [];
 
   /**
    * AppController
@@ -32,5 +43,5 @@
    * @main GiveMeAnswer
    * @constructor
    */
-  function AppController () {}
+  function AppController() {}
 })();

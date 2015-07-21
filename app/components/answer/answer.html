@@ -1,0 +1,107 @@
+<h1>アンケート</h1>
+
+<div class="panel panel-primary">
+  <div class="panel-body">
+    概要分
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <div class="panel-title">
+      回答者情報入力
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      <label class="label label-default">氏名</label>
+      <input class="form-control" name="name" placeholder="あなたの名前を入力してください" type="text" value="">
+    </div>
+    <div class="form-group">
+      <label class="label label-default">所属</label>
+      <select class="form-control" name="">
+        <option value="">所属部署を選択してください</option>
+        <option ng-repeat="department in answer.departments" value="option">{{department}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <span class="label label-default">勤続年数</span>
+      <input class="form-control" name="name" type="number" value="" placeholder="勤続年数を入力してください">
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <span class="panel-title">Q1</span>
+    <span>あなたはこのセミナーハンズオンに満足しましたか？</span>
+  </div>
+  <div class="panel-body">
+    <textarea class="form-control" cols="40" name="name" rows="4"></textarea>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <span class="panel-title">Q2</span>
+    <span>選んでください</span>
+  </div>
+  <div class="panel-body">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="">
+        Option one is this and that&mdash;be sure to include why it's great
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="">
+        Option two is disabled
+      </label>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <div class="form-group">
+      <span>その他を選ばれた方へ</span>
+      <textarea class="form-control" cols="40" name="name" rows="2"></textarea>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <span class="panel-title">Q3</span>
+    <span>選んでください</span>
+  </div>
+  <div class="panel-body">
+    <div class="radio">
+      <label>
+        <input checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1">
+        Option one is this and that&mdash;be sure to include why it's great
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input id="optionsRadios2" name="optionsRadios" type="radio" value="option2">
+        Option two can be something else and selecting it will deselect option one
+      </label>
+    </div>
+    <div class="radio disabled">
+      <label>
+        <input disabled id="optionsRadios3" name="optionsRadios" type="radio" value="option3">
+        Option three is disabled
+      </label>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <div class="form-group">
+      <span>その他を選ばれた方へ</span>
+      <textarea class="form-control" cols="40" name="name" rows="2"></textarea>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <button class="btn btn-success glyphicon glyphicon-ok" type="button" name="button">アンケートに回答する</button>
+  <button class="btn btn-info glyphicon glyphicon-pushpin" type="button" name="button">アンケートを一時保存する</button>
+</div>
